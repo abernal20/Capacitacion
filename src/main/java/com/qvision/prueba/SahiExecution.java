@@ -2,6 +2,7 @@ package com.qvision.prueba;
 
 import java.util.List;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -53,7 +54,8 @@ public class SahiExecution {
 		  WebElement BtnRegister = driver.findElement(By.xpath("/html/body/center/div/form/input[2]"));
 		  BtnRegister.click();		  
 
-		  
+		  Alert alert = driver.switchTo().alert();
+		  alert.accept();
 		  
 		  
 		  driver.quit();
