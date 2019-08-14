@@ -54,9 +54,14 @@ public class SahiExecution {
 		  WebElement BtnRegister = driver.findElement(By.xpath("/html/body/center/div/form/input[2]"));
 		  BtnRegister.click();		  
 
-		  Alert alert = driver.switchTo().alert();
-		  alert.accept();
-		  
+		  Alert Alert = driver.switchTo().alert();
+	 		  
+		  String MsjAlert = Alert.getText();
+			System.out.println(MsjAlert);		
+			if(MsjAlert.equals("Registered Successfully")) {
+				System.out.println("Successfully");
+			}
+			Alert.accept();	
 		  
 		  driver.quit();
 	}
